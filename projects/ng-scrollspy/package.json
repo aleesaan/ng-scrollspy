@@ -1,6 +1,22 @@
 {
   "name": "ng-scrollspy",
   "version": "0.0.1",
+  "description": "A lightweight Angular library to detect the active section.",
+  "author": "aleesaan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aleesaan/ng-scrollspy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aleesaan/ng-scrollspy/issues"
+  },
+  "homepage": "https://github.com/aleesaan/ng-scrollspy",
+  "keywords": [
+    "angular",
+    "scrollspy",
+    "scroll spy"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/core": "7.2.5",
     "rxjs": "6.4.0"
