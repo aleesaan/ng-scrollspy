@@ -82,3 +82,5 @@ this.scrollSpy.getCurrentSection$('sub-menu')
     console.log(`${subSection} is active!`);
   });
 ```
+
+Just make sure to call your additional spies something other than `default`, which is used for the (you guessed it) default spy.
