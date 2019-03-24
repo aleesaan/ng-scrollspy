@@ -1,6 +1,8 @@
-# :shipit: Angular Scroll Spy :shipit:
-A lightweight Angular library to get the active section.
-
+# Angular Scroll Spy
+A lightweight Angular library to get the active section.  
+  
+:shipit:  
+  
 [See the demo here](https://aleesaan.github.io/ng-scrollspy/).
 
 ### Features:
