@@ -1,75 +1,144 @@
 {
-  "extends": "tslint:recommended",
-  "rulesDirectory": [
-    "codelyzer"
-  ],
+  "defaultSeverity": "warning",
   "rules": {
-    "array-type": false,
-    "arrow-parens": false,
-    "deprecation": {
-      "severity": "warn"
-    },
-    "import-blacklist": [
+    "no-empty-interface": true,
+    "align": [
       true,
-      "rxjs/Rx"
+      "parameters",
+      "statements"
     ],
-    "interface-name": false,
-    "max-classes-per-file": false,
-    "max-line-length": [
+    "array-type": [
       true,
-      140
+      "array"
     ],
-    "member-access": false,
-    "member-ordering": [
+    "arrow-parens": true,
+    "arrow-return-shorthand": true,
+    "class-name": true,
+    "comment-format": [
       true,
-      {
-        "order": [
-          "static-field",
-          "instance-field",
-          "static-method",
-          "instance-method"
-        ]
-      }
+      "check-space"
     ],
-    "no-consecutive-blank-lines": false,
-    "no-console": [
+    "import-spacing": true,
+    "indent": [
       true,
-      "debug",
-      "info",
-      "time",
-      "timeEnd",
-      "trace"
+      "spaces"
     ],
-    "no-empty": false,
-    "no-inferrable-types": [
-      true,
-      "ignore-params"
-    ],
-    "no-non-null-assertion": true,
-    "no-redundant-jsdoc": true,
-    "no-switch-case-fall-through": true,
-    "no-use-before-declare": true,
-    "no-var-requires": false,
+    "new-parens": true,
+    "no-angle-bracket-type-assertion": true,
+    "no-consecutive-blank-lines": true,
+    "no-default-export": true,
+    "no-irregular-whitespace": true,
+    "no-duplicate-variable": true,
+    "no-eval": true,
+    "no-internal-module": true,
+    "no-trailing-whitespace": true,
+    "no-unsafe-finally": true,
+    "no-var-keyword": true,
     "object-literal-key-quotes": [
       true,
       "as-needed"
     ],
-    "object-literal-sort-keys": false,
-    "ordered-imports": false,
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-whitespace"
+    ],
+    "prefer-const": true,
+    "prefer-method-signature": true,
+    "prefer-template": true,
     "quotemark": [
       true,
       "single"
     ],
-    "trailing-comma": false,
-    "no-output-on-prefix": true,
-    "use-input-property-decorator": true,
-    "use-output-property-decorator": true,
-    "use-host-property-decorator": true,
-    "no-input-rename": true,
-    "no-output-rename": true,
-    "use-life-cycle-interface": true,
-    "use-pipe-transform-interface": true,
-    "component-class-suffix": true,
-    "directive-class-suffix": true
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "space-before-function-paren": [
+      true,
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never"
+      }
+    ],
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "typedef": [
+      true,
+      "call-signature",
+      "parameter",
+      "arrow-parameter",
+      "property-declaration",
+      "variable-declaration",
+      "member-variable-declaration"
+    ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "type-literal-delimiter": true,
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-rest-spread",
+      "check-type",
+      "check-typecast",
+      "check-type-operator",
+      "check-preblock"
+    ],
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "public-static-field",
+          "protected-static-field",
+          "private-static-field",
+          "public-instance-field",
+          "protected-instance-field",
+          "private-instance-field",
+          "public-constructor",
+          "protected-constructor",
+          "private-constructor",
+          "public-static-method",
+          "protected-static-method",
+          "private-static-method",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
+      }
+    ],
+    "no-duplicate-imports": true,
+    "rxjs-no-unsafe-takeuntil": {
+      "severity": "error"
+    },
+    "rxjs-no-unsafe-catch": {
+      "severity": "error"
+    }
   }
 }

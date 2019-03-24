@@ -1,27 +1,82 @@
-# NgScrollspy
+# :shipit: Angular Scroll Spy :shipit:
+A lightweight Angular library to get the active section.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+[See the demo here](https://aleesaan.github.io/ng-scrollspy/).
 
-## Development server
+### Features:
+* Super smooth!
+* Works for nested and dynamically generated elements
+* Supports multiple spies
+* No other dependencies
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Installation
+First install the library.
 
-## Code scaffolding
+```
+npm install ng-scrollspy
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Now import the **NgScrollSpyModule** in your module.
 
-## Build
+```ts
+import { NgScrollSpyModule } from 'ng-scrollspy';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+@NgModule({
+  ...
+  imports: [
+    NgScrollSpyModule,
+  ],
+  ...
+})
+export class AppModule {}
+```
 
-## Running unit tests
+### Usage:
+The **NgScrollSpyModule** comes with a directive and a service.  
+The `scrollSpyElement` directive has to be applied on the elements to be spied, together with a unique `id`:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```html
+<h2 scrollSpyElement id="firstSpiedElement">
+  I am the first being spied!
+</h2>
+```
 
-## Running end-to-end tests
+In your component, on `AfterViewInit`, you can subscribe to the `ScrollSpyService` for updates on the currently active section:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```ts
+import { ScrollSpyService } from 'ng-scrollspy';
 
-## Further help
+@Component()
+export class AppComponent implements AfterViewInit {
+  constructor(private scrollSpy: ScrollSpyService) {}
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  public ngAfterViewInit(): void {
+    this.subsribeScrollSpy();
+  }
+
+  private subsribeScrollSpy(): void {
+    this.scrollSpy.getCurrentSection$()
+      .subscribe((section: string): void => {
+        console.log(`${section} is active!`);
+      });
+  }
+}
+```
+
+#### Multiple spies:
+You might need to have different spies at the same time, like in a page with multiple menus.  
+You can specify this as an input to the directive:
+
+```html
+<h2 scrollSpyElement scrollSpyId="sub-menu" id="subMenuElement1">
+  I am the first spied element of a sub menu!
+</h2>
+```
+
+In the service, you can then subscribe to the spy you specified:
+```ts
+this.scrollSpy.getCurrentSection$('sub-menu')
+  .subscribe((subSection: string): void => {
+    console.log(`${subSection} is active!`);
+  });
+```

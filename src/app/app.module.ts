@@ -1,16 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
+import { LoremIpsumComponent } from './lorem-ipsum.component';
+import { NgScrollSpyModule } from 'ng-scrollspy';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoremIpsumComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgScrollSpyModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+  ],
 })
-export class AppModule { }
+export class AppModule {}
