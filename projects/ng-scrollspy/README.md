@@ -18,7 +18,7 @@ First install the library.
 npm install ng-scrollspy
 ```
 
-Now import the **NgScrollSpyModule** in your module.
+Then import the **NgScrollSpyModule** in your module.
 
 ```ts
 import { NgScrollSpyModule } from 'ng-scrollspy';
