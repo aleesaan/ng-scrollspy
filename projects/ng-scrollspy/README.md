@@ -3,7 +3,7 @@ A lightweight Angular library to detect the active section.
   
 :shipit:  
   
-[See the demo here](https://aleesaan.github.io).
+[See the demo here](https://aleesaan.github.io/ng-scrollspy/).
 
 ### Features:
 * Super smooth!
