@@ -1,6 +1,6 @@
 {
-  "name": "ng-scrollspy",
-  "version": "0.0.1",
+  "name": "@aleesaan/ng-scrollspy",
+  "version": "1.0.2",
   "description": "A lightweight Angular library to detect the active section.",
   "author": "aleesaan",
   "repository": {

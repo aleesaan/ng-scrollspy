@@ -1,10 +1,10 @@
-import { Directive, AfterViewInit, OnDestroy, Input, ElementRef } from '@angular/core';
+import { Directive, OnDestroy, Input, ElementRef, OnInit } from '@angular/core';
 import { ScrollSpyService } from './scrollspy.service';
 
 @Directive({
   selector: '[scrollSpyElement]',
 })
-export class ScrollSpyElementDirective implements AfterViewInit, OnDestroy {
+export class ScrollSpyElementDirective implements OnInit, OnDestroy {
   @Input()
   private scrollSpyId: string;
 
@@ -13,7 +13,7 @@ export class ScrollSpyElementDirective implements AfterViewInit, OnDestroy {
     private scrollSpy: ScrollSpyService,
   ) {}
 
-  public ngAfterViewInit(): void {
+  public ngOnInit(): void {
     this.scrollSpy.addElement(this.elementRef.nativeElement, this.scrollSpyId);
   }
 
