@@ -15,7 +15,7 @@ A lightweight Angular library to detect the active section.
 First install the library.
 
 ```
-npm install ng-scrollspy
+npm install @aleesaan/ng-scrollspy
 ```
 
 Then import the **NgScrollSpyModule** in your module.
